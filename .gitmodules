@@ -14,7 +14,7 @@
 	url = https://github.com/brianmc95/simulte.git
 [submodule "extern/vanetza"]
 	path = extern/vanetza
-	url = https://github.com/brianmc95/vanetza.git
+	url = https://github.com/MounaKaroui/vanetza.git
 [submodule "extern/veins"]
 	path = extern/veins
 	url = https://github.com/sommer/veins.git
