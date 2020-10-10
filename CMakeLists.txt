@@ -25,7 +25,7 @@ import_opp_target(veins ${Veins_DIR}/src/Makefile)
 find_path(INET_DIR NAMES src/inet/package.ned PATHS extern/inet DOC "INET root directory")
 import_opp_target(INET ${INET_DIR}/src/Makefile)
 
-option(WITH_SIMULTE "Build Artery with SimuLTE integration" OFF)
+option(WITH_SIMULTE "Build Artery with SimuLTE integration" ON)
 if(WITH_SIMULTE)
     find_path(SimuLTE_DIR NAMES src/package.ned PATHS extern/simulte DOC "SimuLTE root directory")
     import_opp_target(lte ${SimuLTE_DIR}/src/Makefile)
@@ -65,12 +65,12 @@ if("${SimuLTE_DIR}" STREQUAL "${PROJECT_SOURCE_DIR}/extern/simulte" AND WITH_SIM
     add_dependencies(lte build_simulte)
 endif()
 
-option(WITH_ENVMOD "Build Artery with environment model feature" ON)
+option(WITH_ENVMOD "Build Artery with environment model feature" OFF)
 option(WITH_STORYBOARD "Build Artery with storyboard feature" ON)
 option(WITH_TRANSFUSION "Build Artery with transfusion feature" OFF)
 option(WITH_TESTBED "Build Artery with testbed feature" OFF)
 SET(OMNETPP_RUN_ENV "Cmdenv" CACHE STRING "Environment to use when running simulation")
-SET(SCENARIO_CONFIG "Base" CACHE STRING "Scenario you want to run in Cmdenv")
+SET(SCENARIO_CONFIG "inet_rsu" CACHE STRING "Scenario you want to run in Cmdenv")
 
 add_subdirectory(src/artery)
 add_subdirectory(src/traci)
