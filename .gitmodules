@@ -15,6 +15,7 @@
 [submodule "extern/vanetza"]
 	path = extern/vanetza
 	url = https://github.com/MounaKaroui/vanetza.git
+	branch=vanetza-phdWork
 [submodule "extern/veins"]
 	path = extern/veins
 	url = https://github.com/sommer/veins.git
