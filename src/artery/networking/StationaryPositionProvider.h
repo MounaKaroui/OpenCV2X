@@ -19,7 +19,7 @@ class StationaryPositionProvider : public omnetpp::cSimpleModule, public traci::
         // PositionProvider
         const vanetza::PositionFix& position_fix() override { return mPositionFix; }
 
-    protected:
+    //protected:
         void traciInit() override;
         virtual Position getInitialPosition();
 
