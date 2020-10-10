@@ -62,6 +62,7 @@ void InetRadioDriver::initialize(int stage)
 void InetRadioDriver::receiveSignal(cComponent* source, simsignal_t signal, double value, cObject*)
 {
 	if (signal == VanetRx::ChannelLoadSignal) {
+		cbr=value;
 		emit(RadioDriverBase::ChannelLoadSignal, value);
 	}
 }
