@@ -27,6 +27,22 @@ add_library(core SHARED
     application/den/SuspendableUseCase.cc
     application/den/TrafficJamUseCase.cc
     application/den/UseCase.cc
+    
+    application/AlertApp/SimpleAlertApp.cc
+    
+    application/GLOSA/Glosa.cc
+    application/GLOSA/GlosaRSU.cc
+    application/GLOSA/GlosaUseCaseRSU.cc
+    application/GLOSA/SimpleSegmentSABIN.cc
+    
+
+    application/smartReroutingRSU_Veh/SmartReroutingRSU.cc
+    application/smartReroutingRSU_Veh/SmartReroutingVeh.cc
+    
+    rateControl/CbrRateControl.cc
+    rateControl/Application/CbrAppTest.cc
+    
+    networking/AdaptiveLimeric/AdaptiveLimericDccEntity.cc
     networking/AccessInterface.cc
     networking/DccEntityBase.cc
     networking/FsmDccEntity.cc
@@ -55,6 +71,8 @@ target_link_libraries(artery INTERFACE core)
 add_library(Artery::Core ALIAS core)
 
 generate_opp_message(utility/AsioData.msg TARGET core)
+generate_opp_message(utility/GlosaPacket.msg TARGET core)
+generate_opp_message(utility/TrafficInformation.msg TARGET core)
 
 set_target_properties(core PROPERTIES
     OUTPUT_NAME artery_core
