@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ 
+  <routes> 
+  <vType  id="Car" accel="1"  decel="2"    maxSpeed="13.89"  minGap="2.5" tau="0.5" sigma="0"  vClass="passenger" lcKeepRight="0"  lcSpeedGain="0" lcStrategic="0" />
+  <route id="route0" edges="-50316829#8 -50316829#7  -50316829#6 -50316829#5 -50316829#4 -50316829#3 -50316829#2 -50316829#1"/>
+ 
+
+  <flow id="f4" begin="0"  period="1"   route="route0"  type="Car"   number="10" departSpeed="13.89"  />
+  
+  
+</routes>
+<!--emissionClass="PHEMlight/PKW_G_EU4"  emissionClass="PHEMlight/PC_D_EU4"
+jmDriveAfterRedTime="300"  jmDriveRedSpeed="13.89" -->
